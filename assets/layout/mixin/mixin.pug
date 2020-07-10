@@ -1,0 +1,49 @@
+//- Phần mixin cho layout chung
+//- Title
+mixin titlePage(page)
+  title= page
+//- Header user
+mixin header-user(val)
+  li.header__user--items
+    a(href="#").header__user--link= val
+  span -
+//- Footer
+mixin footer-menu-header(h)
+  h4.footer__menu--header= h
+mixin footer-menu-list(val)
+  ul.footer__menu--list
+    li.footer__menu--items
+      a.footer__menu--link= val
+mixin footer-menu-media(media)
+  a(href="#")
+    if media == "rss"
+      i(class=`fas fa-${media}`)
+    else
+      i(class=`fab fa-${media}`)
+mixin footer-payment(val)
+  a(href="#")
+    i(class=`fab fa-cc-${val}`)
+//- Menu
+mixin menu-nav(nav)
+  li.menu__nav--items
+    a(href="#").menu__nav--link= nav
+    if nav == "RƯỢU VANG ĐỎ"
+      .menu__sub
+        .menu__sub--inner
+          +menu-sub-head("RƯỢU NGOẠI",["Rượu Chivas","Hàng độc - Rượu độc đáo","Johnnie Walker","Rượu Whisky","Rượu Remy Martin","Rượu Glenmorangie"])
+          +menu-sub-head("RƯỢU VANG",["Rượu Chivas","Hàng độc - Rượu độc đáo","Johnnie Walker","Rượu Whisky","Rượu Remy Martin","Rượu Glenmorangie"])
+          +menu-sub-head("RƯỢU NGOẠI",["Rượu Chivas","Hàng độc - Rượu độc đáo","Johnnie Walker","Rượu Whisky","Rượu Remy Martin","Rượu Glenmorangie"])
+          .menu__sub--img
+            img(src="assets/images/menu/sub.png", alt="Sub menu")
+mixin menu-sub-head(h,sub)
+  .menu__sub--content
+    h4.menu__sub--header= h
+    ul.menu__sub--list
+      each val in sub
+        +menu-sub-list(val)
+mixin menu-sub-list(sub)
+    li.menu__sub--items
+      a(href="#").menu__sub--link= sub
+//- ----------Mixin cho các page----------
+
+//- Home page
