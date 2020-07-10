@@ -1,0 +1,15 @@
+header.header
+  .container.header__inner
+    .header__user
+      i.fas.fa-bars
+      ul.header__user--list
+        +header-user("Tài khoản của tôi")
+        +header-user("Trạng thái đơn hàng")
+        +header-user("Danh sách ưa thích")
+        +header-user("Giỏ hàng")
+        +header-user("Đăng nhập")
+        +header-user("Đăng ký")
+    .header__search
+      input(type="text" placeholder="Tìm kiếm ở đây...")
+      button(type="submit")  
+        i.fas.fa-search

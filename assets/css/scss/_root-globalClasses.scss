@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Times New Roman", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+a {
+  text-decoration-color: transparent;
+  cursor: pointer;
+}
+button,
+i,
+input {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  @include res("xl") {
+    max-width: 960px;
+  }
+  @include res("lg") {
+    max-width: 720px;
+  }
+  @include res("md") {
+    max-width: 540px;
+  }
+  @include res("sm") {
+    width: 100%;
+  }
+}
