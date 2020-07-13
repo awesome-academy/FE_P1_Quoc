@@ -12,6 +12,13 @@
      src: url("webfonts/fa-solid-900.eot");
      src: url("webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("webfonts/fa-solid-900.woff2") format("woff2"), url("webfonts/fa-solid-900.woff") format("woff"), url("webfonts/fa-solid-900.ttf") format("truetype"), url("webfonts/fa-solid-900.svg#fontawesome") format("svg");
  }
+ @font-face {
+  font-family: 'Font Awesome 5 Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url("webfonts/fa-regular-400.eot");
+  src: url("webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("webfonts/fa-regular-400.woff2") format("woff2"), url("webfonts/fa-regular-400.woff") format("woff"), url("webfonts/fa-regular-400.ttf") format("truetype"), url("webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
 /*!
  * Font Awesome Free 5.13.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -33,6 +40,8 @@
   font-family: 'Font Awesome 5 Brands';}
 .fas {
   font-family: 'Font Awesome 5 Solid';}
+.far {
+  font-family: 'Font Awesome 5 Regular';}
 .fa-lg {
   font-size: 1.33333em;
   line-height: 0.75em;

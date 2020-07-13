@@ -1,5 +1,7 @@
-//- Phần mixin cho layout chung
-
+//- ----------Mixin cho layout chung----------
+//- Title
+mixin titlePage(page)
+  title= page
 //- Header user
 mixin header-user(val)
   li.header__user--items
@@ -32,7 +34,7 @@ mixin menu-nav(nav)
           +menu-sub-head("RƯỢU VANG",["Rượu Chivas","Hàng độc - Rượu độc đáo","Johnnie Walker","Rượu Whisky","Rượu Remy Martin","Rượu Glenmorangie"])
           +menu-sub-head("RƯỢU NGOẠI",["Rượu Chivas","Hàng độc - Rượu độc đáo","Johnnie Walker","Rượu Whisky","Rượu Remy Martin","Rượu Glenmorangie"])
           .menu__sub--img
-            img(src="assets/images/menu/sub.png", alt="Sub menu")
+            img(src="assets/images/menu/sub.png" alt="Sub menu")
 mixin menu-sub-head(h,sub)
   .menu__sub--content
     h4.menu__sub--header= h
@@ -40,8 +42,89 @@ mixin menu-sub-head(h,sub)
       each val in sub
         +menu-sub-list(val)
 mixin menu-sub-list(sub)
-    li.menu__sub--items
-      a(href="#").menu__sub--link= sub
+  li.menu__sub--items
+    a(href="#").menu__sub--link= sub
+//- Section header
+mixin section-center(h)
+  .section__center--title
+    h1.section__center--header= h
+    img(src="assets/images/decor/1.png" alt="icon").section__center--icon
+mixin section-arrow(h)
+  .section__arrow--title
+    h1.section__arrow--header= h
+    img(src="assets/images/decor/2.png" alt="icon").section__arrow--icon
+mixin breadcrumb(menu,span,current)
+  .breadcrumb
+    .container.breadcrumb__inner
+      a(href="index.html") Trang chủ
+      span /
+      a(href="#")= menu
+      span= span
+      p= current
 //- ----------Mixin cho các page----------
 
 //- Home page
+//- Header
+mixin home-header-user(val)
+  li.home-header__user--items
+    a(href="#").home-header__user--link= val
+  span -
+//- New products and Top sales
+mixin home-header-new(color, tag, img, h, price, saleoff)
+  aside.home-new__items
+    .home-new__top
+      p(class=`home-new__tag--${color}`)= tag
+      img(src=`assets/images/${img}.png`, alt="wine").home-new__img
+      .home-new__label
+        a(href="#")
+          i.fas.fa-heart
+          span Yêu thích
+        a(href="#")
+          i.fas.fa-signal
+          span So sánh
+        a(href="#")  
+          i.fas.fa-compress-alt
+    .home-new__bot
+      a(href="#").home-new__wine
+        h4= h
+      p.home-new__price.price= price
+        span đ
+      span -
+      p.price= saleoff
+        span đ
+      a.home-new__btn.btn ADD TO CART
+//- Gallery
+mixin home-gallery(img)
+  a(href="#").home-gallery__link
+    p.home-gallery__year 1987
+    p.home-gallery__text RƯỢU
+    img(src=`assets/images/gallery/${img}.png` alt="image").home-galley__img
+    .home-gallery__top
+    .home-gallery__left
+    .home-gallery__bottom
+    .home-gallery__right
+//- Blog & News
+mixin home-blog(img,h,user,date,cmt,p)
+  aside.home-blog__post
+    a(href="#").home-blog__link
+      .home-blog__img
+        img(src=`assets/images/blog/${img}.png`, alt="blog")
+        span
+        i.fas.fa-link
+      h4.home-blog__header= h
+    div.home-blog__des
+      |Đăng bởi 
+      a(href="#")= user
+      |  | 
+      a(href="#")= date
+      |  | 
+      a(href="#")= cmt
+        |  bình luận
+    p.home-blog__content= p
+      a(href="#") Read more
+
+//- Product detail page
+//- Images list
+mixin pdDetail-detail-imglist(img)
+  a(href="#")
+    img(src=`assets/images/product-detail/${img}.png` alt="")

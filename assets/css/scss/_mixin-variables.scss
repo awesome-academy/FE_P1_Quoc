@@ -2,6 +2,7 @@
 $black: #000000;
 $white: #ffffff;
 $gray: #818181;
+$des: #c1c1c1;
 $champagne: #e6ae48;
 $green: #62af26;
 $red: #ed301c;
@@ -12,6 +13,7 @@ $contact: #494949;
 $bordeaux: #9c0001;
 $orange: #f26522;
 $light: #fafafa;
+$home-text: #d6d6d6;
 // Variables
 $bps: (
   "xl": 1200px,
@@ -41,7 +43,7 @@ $bps: (
   flex-direction: $dir;
   flex-wrap: wrap;
 }
-@mixin d-grid($col,$row: 1,$justify: space-between,$align: stretch) {
+@mixin d-grid($col,$row: 1,$justify: center,$align: stretch) {
   display: grid;
   grid-template-columns: $col;
   grid-template-rows: $row;

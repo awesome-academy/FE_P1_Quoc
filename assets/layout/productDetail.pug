@@ -1,0 +1,12 @@
+//- Product detail page
+extends layout.pug
+block title
+  +titlePage("Wineshop | Product detail")
+block main
+  main.pdDetail-main
+    +breadcrumb("Sản phẩm","/","Rượu vang đỏ")
+    include parts/products-detail/detail.pug
+    include parts/products-detail/tab.pug
+    //- Sản phẩm liên quan section
+    +section-center("SẢN PHẨM LIÊN QUAN")
+    include parts/home/top-sales.pug

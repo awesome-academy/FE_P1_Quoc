@@ -4,12 +4,13 @@ html
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name="description" content="Project 1 of Front-end position in Open Education training course")
-    title Project 1 - Front End - OE34 - Sun* DN
+    include mixin/mixin.pug
+    block title  
+      +titlePage('Project 1 - Front End - OE34 - Sun* ĐN')
     link(rel="stylesheet" href="assets/fonts/fontawesome.css")
     link(rel="stylesheet" href="assets/fonts/fonts.css")
     link(rel="stylesheet" href="assets/css/reset.css")
     link(rel="stylesheet" href="assets/css/style.css")
-    include mixin/mixin.pug
   body
     block header
       include parts/header.pug

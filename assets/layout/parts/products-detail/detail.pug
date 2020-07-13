@@ -1,0 +1,57 @@
+section.pdDetail-detail
+  .container.pdDetail-detail__inner
+    .pdDetail-detail__img-wrapper
+      .pdDetail-detail__img-list
+        a(href="#")
+          i.fas.fa-arrow-up
+        div
+          each val in ["1","1","2","3","1"]
+            +pdDetail-detail-imglist(val)
+        a(href="#")
+          i.fas.fa-arrow-down
+      .pdDetail-detail__img-big
+        img(src="assets/images/product-detail/big.png" alt="")
+    .pdDetail-detail__price-wrapper
+      +section-arrow("RƯỢU NHO NĂM 1987")
+      .price 330.000
+        span đ
+      .pdDetail-detail__rv
+        .pdDetail-detail__rv--star
+          span ☆
+          span ☆
+          span ☆
+          span ☆
+          span ☆
+        a(href="#").pdDetail-detail__rv--link 1 Review
+        span |
+        a(href="#").pdDetail-detail__rv--cmt Add Your Review
+      form(action="#").pdDetail-detail__form
+        .pdDetail-detail__color
+          label(for="color").pdDetail-detail__part-header MÀU SẮC
+          input#color(type="radio", name="color" value="champagne")
+          input#color(type="radio", name="color" value="black")
+          input#color(type="radio", name="color" value="bordeaux")
+        .pdDetail-detail__dimension
+          label(for="dimension").pdDetail-detail__part-header KÍCH CỠ
+          select#dimension(name="dimension")
+            option(value="big") Loại to
+            option(value="medium") Loại vừa
+            option(value="small") Loại nhỏ
+        .pdDetail-detail__quantity
+          label(for="quantity").pdDetail-detail__part-header SỐ LƯỢNG
+          input(type="button" value="-" data-field="quantity")
+          input#quantity(type="number" name="quantity" step="1" min="1" value="1")
+          input(type="button" value="+" data-field="quantity")
+        input(type="submit" value="ADD TO CART").btn
+        div
+          a(href="#")
+            i.fas.fa-heart
+            span Yêu thích
+          a(href="#")
+            i.fas.fa-signal
+            span So sánh
+          a(href="#")  
+            i.fas.fa-compress-alt
+      .pdDetail-detail__part-header MÔ TẢ
+        p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
+

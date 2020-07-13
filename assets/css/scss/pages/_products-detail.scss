@@ -1,0 +1,49 @@
+.pdDetail- {
+  &detail {
+    &__inner {
+      @include d-grid(7fr 5fr);
+    }
+    &__img {
+      &-wrapper {
+        @include d-grid(1fr 6fr);
+      }
+      &-list {
+        @include d-grid(1fr, 1fr 20fr 1fr);
+        a {
+          @include d-flex(center, center, column);
+          color: $gray;
+          transition: 0.3s;
+          &:hover {
+            color: $champagne;
+          }
+        }
+        div {
+          @include d-flex(center, center, column);
+          a {
+            padding: 5px 0;
+            border-bottom: 1px solid $des;
+            
+            &:last-child {
+              border: none;
+            }
+            img {
+              width: 100%;
+              transition: 0.3s;
+              border: 2px solid transparent;
+              &:hover {
+                border: 2px solid $champagne;
+              }
+            }
+          }
+        }
+      }
+      &-big {
+
+      }
+    }
+  }
+  &tab {
+    &__inner {
+    }
+  }
+}
