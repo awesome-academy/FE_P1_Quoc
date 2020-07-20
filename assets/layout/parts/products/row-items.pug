@@ -1,0 +1,20 @@
+.products__row
+  .products__row--top
+    .products__row--show
+      a(href="products-grid.html")
+        i.fas.fa-th
+      a(href="#")  
+        i.fas.fa-list
+    .products__row--page
+      a(href="#")  
+        i.fas.fa-caret-left
+      a(href="#") 1
+      a(href="#") 2
+      a(href="#") 3
+      a(href="#") 4
+      a(href="#") 5
+      a(href="#")
+        i.fas.fa-caret-right
+  .products__row--bot
+    - for (let i = 1; i <= 4; i++)
+      +products-row(i,"RƯỢU NHO NĂM 1987","330.000","Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.")
