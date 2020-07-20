@@ -1,0 +1,18 @@
+//- Home page
+extends layout.pug
+block title
+  +titlePage("Wineshop | HomePage")
+block header
+  include parts/home/header-home.pug
+block main
+  main.home-main
+    +section-center("GIỚI THIỆU")
+    include parts/home/intro-home.pug
+    include parts/home/hot-deal.pug
+    +section-center("SẢN PHẨM MỚI")
+    include parts/home/new-products.pug
+    include parts/home/gallery.pug
+    +section-center("SẢN PHẨM BÁN CHẠY")
+    include parts/home/top-sales.pug
+    include parts/home/blog-news.pug
+  

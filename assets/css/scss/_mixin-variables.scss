@@ -52,3 +52,8 @@ $bps: (
   justify-content: $justify;
   align-content: $align;
 }
+// Padding - Border
+@mixin pd-bd($pd-tb,$pd-lr,$color: transparent,$width: 1px,$style: solid) {
+  padding: $pd-tb $pd-lr;
+  border: $width $style $color;
+}
