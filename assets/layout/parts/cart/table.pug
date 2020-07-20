@@ -1,0 +1,21 @@
+section.cart
+  .container
+    +section-arrow("GIỎ HÀNG")
+    .cart__inner
+      .cart__table
+        .cart__table-row
+          h4 SẢN PHẨM
+          h4 ẢNH
+          h4 TÊN SẢN PHẨM
+          h4 GIÁ
+          h4 SỐ LƯỢNG
+          h4 TỔNG SỐ
+          h4 XÓA
+        +cart-table(1,"RƯỢU VANG ĐỎ",345,1)
+        +cart-table(1,"HAMBURGER THỊT BÒ",345,1)
+        +cart-table(1,"RƯỢU VANG ĐỎ",345,2)
+        +cart-table(1,"HAMBURGER THỊT BÒ",345,2)
+      .cart__btn
+        a(href="#").btn TIẾP TỤC MUA HÀNG
+        a(href="#").btn XÓA
+        a(href="#").btn CẬP NHẬT
