@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="Project 1 of Front-end position in Open Education training course")
+    include mixin/mixin.pug
+    block title  
+      +titlePage('Project 1 - Front End - OE34 - Sun* ĐN')
+    link(rel="stylesheet" href="assets/fonts/fontawesome.css")
+    link(rel="stylesheet" href="assets/fonts/fonts.css")
+    link(rel="stylesheet" href="assets/css/reset.css")
+    link(rel="stylesheet" href="assets/css/style.css")
+  body
+    block header
+      include parts/header.pug
+    block menu
+      include parts/menu.pug
+    block main
+    block footer
+      include parts/footer.pug

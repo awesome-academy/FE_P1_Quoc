@@ -1,0 +1,285 @@
+//- ----------Mixin cho layout chung----------
+//- Title
+mixin titlePage(page)
+  title= page
+//- Header user
+mixin header-user(val)
+  li.header__user--items
+    a(href="#").header__user--link= val
+  span -
+//- Footer
+mixin footer-menu-header(h)
+  h4.footer__menu--header= h
+mixin footer-menu-list(val)
+  ul.footer__menu--list
+    li.footer__menu--items
+      a.footer__menu--link= val
+mixin footer-menu-media(media)
+  a(href="#")
+    if media == "rss"
+      i(class=`fas fa-${media}`)
+    else
+      i(class=`fab fa-${media}`)
+mixin footer-payment(val)
+  a(href="#")
+    i(class=`fab fa-cc-${val}`)
+//- Menu
+mixin menu-nav(nav)
+  li.menu__nav--items
+    a(href="#").menu__nav--link= nav
+    if nav == "RƯỢU VANG ĐỎ"
+      .menu__sub
+        .menu__sub--inner
+          +menu-sub-head("RƯỢU NGOẠI",["Rượu Chivas","Hàng độc - Rượu độc đáo","Johnnie Walker","Rượu Whisky","Rượu Remy Martin","Rượu Glenmorangie"])
+          +menu-sub-head("RƯỢU VANG",["Rượu Chivas","Hàng độc - Rượu độc đáo","Johnnie Walker","Rượu Whisky","Rượu Remy Martin","Rượu Glenmorangie"])
+          +menu-sub-head("RƯỢU NGOẠI",["Rượu Chivas","Hàng độc - Rượu độc đáo","Johnnie Walker","Rượu Whisky","Rượu Remy Martin","Rượu Glenmorangie"])
+          .menu__sub--img
+            img(src="assets/images/menu/sub.png" alt="Sub menu")
+mixin menu-sub-head(h,sub)
+  .menu__sub--content
+    h4.menu__sub--header= h
+    ul.menu__sub--list
+      each val in sub
+        +menu-sub-list(val)
+mixin menu-sub-list(sub)
+  li.menu__sub--items
+    a(href="#").menu__sub--link= sub
+//- Section header
+mixin section-center(h)
+  .section__center--title
+    h1.section__center--header= h
+    img(src="assets/images/decor/1.png" alt="icon").section__center--icon
+mixin section-arrow(h)
+  .section__arrow--title
+    h1.section__arrow--header= h
+    img(src="assets/images/decor/2.png" alt="icon").section__arrow--icon
+mixin breadcrumb(menu,span,current)
+  .breadcrumb
+    .container.breadcrumb__inner
+      a(href="index.html") Trang chủ
+      span /
+      a(href="#")= menu
+      span= span
+      p= current
+//- ----------Mixin cho các page----------
+
+//- Home page
+//- Header
+mixin home-header-user(val)
+  li.home-header__user--items
+    a(href="#").home-header__user--link= val
+  span -
+//- New products and Top sales
+mixin home-header-new(color, tag, img, h, price, saleoff)
+  aside.home-new__items
+    .home-new__top
+      p(class=`home-new__tag--${color}`)= tag
+      img(src=`assets/images/${img}.png`, alt="wine").home-new__img
+      .home-new__label
+        a(href="#")
+          i.fas.fa-heart
+          span Yêu thích
+        a(href="#")
+          i.fas.fa-signal
+          span So sánh
+        a(href="#")  
+          i.fas.fa-compress-alt
+    .home-new__bot
+      a(href="#").home-new__wine
+        h4= h
+      p.home-new__price.price= price
+        span đ
+      span -
+      p.price= saleoff
+        span đ
+      .home-new__btn
+        a.btn ADD TO CART
+//- Gallery
+mixin home-gallery(img)
+  a(href="#").home-gallery__link
+    p.home-gallery__year 1987
+    p.home-gallery__text RƯỢU
+    img(src=`assets/images/gallery/${img}.png` alt="image").home-galley__img
+    .home-gallery__top
+    .home-gallery__left
+    .home-gallery__bottom
+    .home-gallery__right
+//- Blog & News
+mixin home-blog(img,h,user,date,cmt,p)
+  aside.home-blog__post
+    a(href="#").home-blog__link
+      .home-blog__img
+        img(src=`assets/images/blog/${img}.png`, alt="blog")
+        span
+        i.fas.fa-link
+      h4.home-blog__header= h
+    div.home-blog__des
+      |Đăng bởi 
+      a(href="#")= user
+      |  | 
+      a(href="#")= date
+      |  | 
+      a(href="#")= cmt
+        |  bình luận
+    p.home-blog__content= p
+      a(href="#") Read more
+
+//- Product detail page
+//- Images list
+mixin pdDetail-detail-imglist(img)
+  a(href="#")
+    img(src=`assets/images/product-detail/${img}.png` alt="")
+mixin pdDetail-tab-content(id,content)
+  if id == "feature"
+    input(type="radio" id=`${id}` name="tab" checked)
+    .pdDetail-tab__content= content
+  else
+    input(type="radio" id=`${id}` name="tab")
+    .pdDetail-tab__content= content
+
+//- Products
+mixin products-list(a,span)
+  li
+    a(href="#")= a
+      span= span
+//- Products row
+mixin products-row(img,h,price,p)
+  aside.products__row--items
+    img(src=`assets/images/products/${img}.png` alt="wine")
+    .products__row--content
+      h3= h
+      p.price= price
+        span đ
+      p.products__row--text= p
+      .products__row--btn
+        a.btn ADD TO CART
+        .products__row--btn-group
+          a(href="#")
+            i.fas.fa-heart
+            span Yêu thích
+          a(href="#")
+            i.fas.fa-signal
+            span So sánh
+
+//- Cart
+//- table
+mixin cart-table(img,name,price,no)
+  .cart__table-row
+    div 
+      img(src=`assets/images/cart/${img}.jpg` alt="wine")
+      h5= name
+    div
+      h5= name
+    div
+      p.price= `${price}.000`
+        span đ
+    div
+      h5= no
+    div
+      p.price= `${(price*no)}.000`
+        span đ
+    div
+      a(href="#")
+        i.fas.fa-trash-alt
+
+//- Order
+//- table top
+mixin order-table-top(text,num)
+  a(href="#")= `${text} (${num})`
+    span |
+//- table row
+mixin order-table-row(stt,user,date,time,place,sl,total,status,other)
+  .order__bot-row
+    div
+      p= `0${stt}`
+    div
+      span= `${user} - `
+      span= date
+      p= time
+    div
+      p= place
+    div
+      p= sl
+    div
+      p= `${total}.000đ`
+    div
+      p= status
+    div
+      a(href="#")= other
+mixin contact-media(media)
+  li
+    a(href="#")
+      i(class=`fab fa-${media}`)
+
+//- Blog detail
+//- new blog
+mixin blDetail-new(img,h,date)
+  a(href="#").blDetail__new--block
+    img(src=`assets/images/blog-detail/${img}.png`, alt="blog-image")
+    div
+      h6= h
+      i.far.fa-calendar
+      span= date
+//- blog comment
+mixin blDetail-cmt(user,time,text)
+  .blDetail__cmt--row
+    .blDetail__cmt--top
+      div
+        span Bình luận bởi #[a(href="#")= user]
+      div
+        span= `Cách đây ${time} giờ`
+        a(href="#") Trả lời
+    .blDetail__cmt--text
+      p= text
+mixin blDetail-post(img,h,user,date,cmt,p)
+  .blDetail__post
+    img(src=`assets/images/blog/${img}.png`, alt="blog")
+    h4.blDetail__post--header= h
+    div.blDetail__post--des
+      |Đăng bởi 
+      a(href="#")= user
+      |  | 
+      a(href="#")= date
+      |  | 
+      a(href="#")= cmt
+        |  bình luận
+    p.blDetail__post--content= p
+
+//- Address page
+//- address form
+mixin address-form(id,fname,lname,cty,add,city,qt,zip,phone)
+  form(id=`address__form${id}` action="#" method="get").address__form
+    label(for="fname")
+      span Tên
+      input(type="text" name="fname" value=`${fname}`)
+    label(for="lname")
+      span Họ & tên đệm
+      input(type="text" name="lname" value=`${lname}`)
+    label(for="cty")
+      span Công ty
+      input(type="text" name="cty" value=`${cty}`)
+    label(for="add")
+      span Địa chỉ
+      input(type="text" name="address" value=`${add}`)
+    label(for="city")
+      span Thành phố
+      input(type="text", name="city" value=`${city}`)
+    label(for="qt")
+      span Quốc tịch
+      input(type="text", name="qt" value=`${qt}`)
+    label(for="zip")
+      span Postal/Zip Code
+      input(type="text", name="zip" value=`${zip}`)
+    label(for="phone")
+      span Phone
+      input(type="tel", name="phone" value=`${phone}`)
+mixin address-btn(id,submit,del)
+  .address__btn
+    label(for="check")
+      input(type="checkbox", name="check" form=`address__form${id}` checked)
+      span Đặt làm địa chỉ mặc định?
+    div
+      button(type="submit" form=`address__form${id}`).btn.address__btn--submit= submit
+      button(type="submit" form=`address__form${id}`).btn.address__btn--del= del
+    
+
