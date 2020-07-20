@@ -1,0 +1,7 @@
+extends layout.pug
+block title
+  +titlePage("Wineshop | Order")
+block main
+  main.order-main
+    +breadcrumb("","","Danh sách đơn hàng")
+    include parts/order-list/table.pug
