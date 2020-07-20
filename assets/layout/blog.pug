@@ -1,0 +1,7 @@
+extends layout.pug
+block title
+  +titlePage("Wineshop | Blog")
+block main
+  main.blog-main
+    +breadcrumb("","","Blog")
+    include parts/blog/blog-list.pug
