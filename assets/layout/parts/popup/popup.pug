@@ -1,0 +1,16 @@
+section.popup
+  .popup__inner
+    .popup__close
+      i.fas.fa-times
+    .popup__content
+      img(src="assets/images/popup/pic.png", alt="picture")
+      .popup__content--wrapper
+        .popup__content--text
+          h1 Gửi Email
+          p Đăng ký Email ngay hôm nay để nhận đươc thông tin về các sự kiện, các chương trình giảm giá của chúng tôi sớm nhất!
+          form(action="#", method="post")
+            input(type="email" name="email" placeholder="Email của bạn...")
+            button(type="submit").btn GỬI EMAIL
+            div  
+              input#popup-check(type="checkbox" name="get-noti")
+              label(for="popup-check") Không hiển thị lại thông báo này
