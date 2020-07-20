@@ -1,0 +1,38 @@
+section.contact
+  .container
+    +section-arrow("LIÊN HỆ")
+    .contact__inner
+      .contact__map
+        img(src="assets/images/map/map.png", alt="map")
+        form#contact(action="#", method="get").contact__form
+          .contact__form-row
+            label(for="contact-name") Your Name
+            input#contact-name(type="text", name="name")
+          .contact__form-row
+            label(for="contact-email") Your Email
+            input#contact-email(type="email", name="email")
+          .contact__form-row
+            label(for="contact-sub") Subject
+            input#contact-sub(type="text", name="subject")
+          .contact__form-row
+            label(for="contact-mess") Your Message
+            textarea#contact-mess(name="message" rows="6" form="contact" placeholder="Enter your message...")
+          .contact__form-row
+            div
+              input(type="submit", value="GỬI").btn
+      .contact__add
+        img(src="assets/images/logo/logo.png", alt="logo")
+        ul.contact__info
+          li
+            i.fas.fa-map-marker-alt
+            p Tầng 4, Tòa nhà Hà Nội group, Số 442 Đội Cấn, Ba Đình, Hà Nội
+          li
+            i.fas.fa-phone
+            p (04) 6674 2332
+          li
+            i.fas.fa-user
+            p support@milano.com
+        h3 FOLLOW US:
+        ul.contact__media
+          each val in ["facebook-f","google-plus-g","twitter","youtube","pinterest","vk"]
+            +contact-media(val)
