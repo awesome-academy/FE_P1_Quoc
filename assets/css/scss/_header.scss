@@ -42,8 +42,7 @@
         z-index: 100;
         top: 0;
         left: 100%;
-        padding: 1rem 3rem;
-        border: 1px solid $champagne;
+        @include pd-bd(1rem,3rem,$champagne);
         background-color: $white;
         width: 20rem;
         @include d-flex(center, flex-start,column);
@@ -87,9 +86,8 @@
       }
     }
     input {
-      border: solid 1px transparent;
+      @include pd-bd(5px, 15px);
       border-radius: 5rem;
-      padding: 5px 15px;
       font-style: italic;
       font-size: 1.2rem;
       max-width: 40rem;
