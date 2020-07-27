@@ -1,0 +1,46 @@
+section.order
+  .container
+    +section-arrow("ĐƠN HÀNG")
+    .order__inner
+      .order__table
+        .order__top
+          h4 DANH SÁCH ĐƠN HÀNG
+          div
+            +order-table-top("Trạng thái Tất cả","16")
+            +order-table-top("Đã hủy","10")
+            +order-table-top("Chưa duyệt","0")
+            +order-table-top("Đã duyệt","0")
+            +order-table-top("Đã thanh toán-chờ mua hàng","0")
+            +order-table-top("Đã mua hàng","0")
+            +order-table-top("Hàng đã về-chờ giao hàng","0")
+            +order-table-top("Đã kết thúc","6")
+        .order__bot
+          .order__bot-row
+            h5 STT
+            h5 Mã hóa đơn/ngày mua hàng
+            h5 kho nhận hàng
+            h5 số sp
+            h5 tổng tiền
+            h5 tình trạng
+            h5 thao tác
+          - for (let i = 1; i <= 6; i++)
+            +order-table-row(i,"LEANHGIANG89","17/06/2015","01:36 14/03/2015","HÀ ĐÔNG","7","350","Đã thanh toán","Chi tiết")
+      .order__info
+        .order__user
+          h3 Thông tin khách hàng
+          ul
+            li
+              i.fas.fa-user
+              div
+                p GiangLe
+                p Leanhgiang89@gmail.com
+            li
+              i.fas.fa-map-marker-alt
+              div  
+                p Tòa nhà Hà Nội group
+                p 442 Đội Cấn, Ba Đình Hà Nội
+            li
+              i.fas.fa-phone
+              div
+                p (04) 3786 8904
+          a(href="address.html") Chi tiết địa chỉ
