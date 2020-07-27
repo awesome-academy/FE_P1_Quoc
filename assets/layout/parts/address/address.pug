@@ -1,0 +1,23 @@
+section.address
+  .container
+    +section-arrow("ĐỊA CHỈ")
+    .address__head
+      p ĐỊA CHỈ CỦA BẠN
+      div 
+        a(href="#") Thêm địa chỉ
+    .address__wrapper
+      .address__added
+        .address__added--inner.active
+          +address-form(1,"Giang","Lê Anh","Cổ phần công nghệ DKT","Tòa nhà Hanoi Group, 442 Đội Cấn, Ba Đình, Hà Nội","Hà Nội","Việt Nam","2300089","0974554928")
+          +address-btn(1,"Chỉnh sửa địa chỉ","Xóa")
+        .address__added--inner  
+          +address-form(2,"Giang","Lê Anh","Cổ phần công nghệ DKT","Tòa nhà Hanoi Group, 442 Đội Cấn, Ba Đình, Hà Nội","Hà Nội","Việt Nam","2300089","0974554928")
+          .address__added--modified
+            a(href="#") Chỉnh sửa địa chỉ
+        .address__added--inner
+          +address-form(3,"Giang","Lê Anh","Cổ phần công nghệ DKT","Tòa nhà Hanoi Group, 442 Đội Cấn, Ba Đình, Hà Nội","Hà Nội","Việt Nam","2300089","0974554928")
+          .address__added--modified
+            a(href="#") Chỉnh sửa địa chỉ
+      .address__new.active
+        +address-form(4,"Giang","Lê Anh","Cổ phần công nghệ DKT","Tòa nhà Hanoi Group, 442 Đội Cấn, Ba Đình, Hà Nội","Hà Nội","Việt Nam","2300089","0974554928")
+        +address-btn(4,"Cập nhật địa chỉ","Thoát")
