@@ -1,0 +1,35 @@
+section.register
+  .container
+    .register__top
+      +section-arrow("ĐĂNG KÝ")
+      a(href="login.html").btn.btn-big ĐĂNG NHẬP
+      i.fas.fa-sign-in-alt
+    form(action="#", method="post").register__form
+      h3 Thông tin cá nhân
+      .register__form-row
+        label(for="register-fname") Tên trước *
+        input#register-fname(type="text" name="fName")
+      .register__form-row
+        label(for="register-lname") Tên sau *
+        input#register-lname(type="text" name="lName")
+      .register__form-row
+        label(for="register-email") Email *
+        input#register-email(type="email", name="email")
+      .register__form-row
+        label(for="register-pass") Password *
+        input#register-pass(type="password", name="password")
+      .register__form-row
+        div
+          input#register-check(type="checkbox", name="checkbox" checked)
+          label(for="register-check") Đăng ký nhận bản tin
+      h3 Thông tin Đăng nhập
+      .register__form-row
+        label(for="register-password") Mật khẩu *
+        input#register-password(type="password", name="password")
+      .register__form-row
+        label(for="register-passcf") Xác nhận mật khẩu *
+        input#register-passcf(type="password", name="password-confirm")
+      .register__form-row
+        div
+          input(type="submit", value="GỬI").btn
+          a(href="javascript:history.back()").btn QUAY LẠI

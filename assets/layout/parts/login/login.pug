@@ -1,0 +1,22 @@
+section.login
+  .container
+    .login__top
+      +section-arrow("ĐĂNG NHẬP")
+      a(href="register.html").btn.btn-big ĐĂNG KÝ
+      i.far.fa-registered
+    .login__bot
+      h3 Khách hàng đăng nhập
+      p Nếu bạn có một tài khoản, xin vui lòng đăng nhập.
+      form(action="#", method="post").login__form
+        .login__form-row
+          label(for="login-email") Email *
+          input#login-email(type="email", name="email")
+        .login__form-row  
+          label(for="login-pass") Password *
+          input#login-pass(type="password", name="password")
+        .login__form-row  
+          div
+            a(href="#") Quên mật khẩu?
+        .login__form-row  
+          div
+            input(type="submit", value="ĐĂNG NHẬP").btn
