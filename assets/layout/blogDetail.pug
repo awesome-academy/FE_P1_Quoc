@@ -1,0 +1,13 @@
+extends layout.pug
+block title
+  +titlePage("Wineshop | Blog detail")
+block main
+  main.blDetail-main
+    +breadcrumb("","","Blog")
+    .container
+      +section-arrow("BLOG")
+      input#blDetail-btn(type="checkbox").blDetail-btn
+      label(for="blDetail-btn").blDetail-label
+        i.fas.fa-bars
+      section.blDetail__inner  
+        include parts/blog-detail/blog-detail.pug

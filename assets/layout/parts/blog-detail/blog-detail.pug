@@ -1,0 +1,54 @@
+.blDetail__left
+  .blDetail__new
+    h4.blDetail__header bài viết mới nhất
+    +blDetail-new(1,"Cách sắp xếp nội thất trong nhà","12/06/2015")
+    +blDetail-new(2,"Cách sắp xếp nội thất trong nhà","12/06/2015")
+    +blDetail-new(3,"Cách sắp xếp nội thất trong nhà","12/06/2015")
+  .blDetail__tag
+    h4.blDetail__header blog tags
+    a(href="#") Đồng hồ
+    a(href="#") Túi
+    a(href="#") Phụ kiện
+    a(href="#") Giày
+    a(href="#") Sandal
+    a(href="#") Áo sơ mi
+    a(href="#") Nước hoa
+    a(href="#") Trẻ em
+    a(href="#") Thời trang nữ
+  .blDetail__video
+    h4.blDetail__header latest video
+    div.blDetail__video-btn
+      img(src="assets/images/blog-detail/video.png", alt="video")
+      div
+        i.fas.fa-play
+.blDetail__right
+  +blDetail-post(1,"VANG THĂNG LONG CLASSIC","Giangle","30/06/2015","60","Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từhoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảmgiác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml.Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...")
+  form#blDetail-form(action="#", method="get").blDetail__form
+    h4 Đóng góp ý kiến
+    .blDetail__form-row
+      label(for="blDetail-name") Tên #[span *]
+      input#blDetail-name(type="text" name="name")
+    .blDetail__form-row
+      label(for="blDetail-email") Email #[span *]
+      input#blDetail-email(type="email", name="email")
+    .blDetail__form-row
+      label(for="blDetail-mess") Email #[span *]
+      textarea#blDetail-mess(name="message" rows="10" form="blDetail-form")
+    .blDetail__form-row
+      div
+        input(type="submit", value="GỬI Ý KIẾN").btn
+  .blDetail__cmt
+    h4 Bình luận (3)
+    .blDetail__cmt--inner
+      +blDetail-cmt("Giangle",4,`Có lẽ bởi tính chất "ăn gian" vóc dáng và vô cùng thoải mái, gợi cảm mà cả 2 dạng trang phục này được áp dụng nhiều nhất trong street style tuần qua ,chọn cho mình bộ trang phục đơn sắc với thiết kế cổ yếm, ống rộng - vừa thoải mái tối đa lại không kém phần gợi cảm, kết hợp cùng đôi giày quai chữ T tôn dáng`)
+      +blDetail-cmt("Giangle",4,`Có lẽ bởi tính chất "ăn gian" vóc dáng và vô cùng thoải mái, gợi cảm mà cả 2 dạng trang phục này được áp dụng nhiều nhất trong street style tuần qua ,chọn cho mình bộ trang phục đơn sắc với thiết kế cổ yếm, ống rộng - vừa thoải mái tối đa lại không kém phần gợi cảm, kết hợp cùng đôi giày quai chữ T tôn dáng`)
+      +blDetail-cmt("Giangle",4,`Có lẽ bởi tính chất "ăn gian" vóc dáng và vô cùng thoải mái, gợi cảm mà cả 2 dạng trang phục này được áp dụng nhiều nhất trong street style tuần qua ,chọn cho mình bộ trang phục đơn sắc với thiết kế cổ yếm, ống rộng - vừa thoải mái tối đa lại không kém phần gợi cảm, kết hợp cùng đôi giày quai chữ T tôn dáng`)
+    .blDetail__cmt--nav
+      a(href="#").icon
+        i.fas.fa-angle-left
+      a(href="#").page.active 1
+      a(href="#").page 2
+      a(href="#").page 3
+      a(href="#").icon
+        i.fas.fa-angle-right
+
