@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project 1 of Front-end position in Open Education training course">
+        <title>Wineshop | Cart</title>
+    <link rel="stylesheet" href="assets/fonts/fontawesome.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <div class="header__user"><i class="fas fa-bars"></i>
+          <ul class="header__user--list">
+                <li class="header__user--items"><a class="header__user--link" href="#">Tài khoản của tôi</a></li><span>-</span>
+                <li class="header__user--items"><a class="header__user--link" href="#">Trạng thái đơn hàng</a></li><span>-</span>
+                <li class="header__user--items"><a class="header__user--link" href="#">Danh sách ưa thích</a></li><span>-</span>
+                <li class="header__user--items"><a class="header__user--link" href="#">Giỏ hàng</a></li><span>-</span>
+                <li class="header__user--items"><a class="header__user--link" href="#">Đăng nhập</a></li><span>-</span>
+                <li class="header__user--items"><a class="header__user--link" href="#">Đăng ký</a></li><span>-</span>
+          </ul>
+        </div>
+        <div class="header__search">
+          <input type="text" placeholder="Tìm kiếm ở đây...">
+          <button type="submit"> <i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </header>
+    <section class="menu">
+      <div class="container menu__inner"><a class="menu__logo" href="#"><img src="assets/images/logo/logo.png" alt="Logo"></a>
+        <div class="menu__nav">
+          <div class="menu__nav--inner"><i class="fas fa-bars"> </i>
+            <ul class="menu__nav--list">
+                  <li class="menu__nav--items"><a class="menu__nav--link" href="#">TRANG CHỦ</a>
+                  </li>
+                  <li class="menu__nav--items"><a class="menu__nav--link" href="#">RƯỢU VANG ĐỎ</a>
+                    <div class="menu__sub">
+                      <div class="menu__sub--inner">
+                            <div class="menu__sub--content">
+                              <h4 class="menu__sub--header">RƯỢU NGOẠI</h4>
+                              <ul class="menu__sub--list">
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Chivas</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Hàng độc - Rượu độc đáo</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Johnnie Walker</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Whisky</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Remy Martin</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Glenmorangie</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu__sub--content">
+                              <h4 class="menu__sub--header">RƯỢU VANG</h4>
+                              <ul class="menu__sub--list">
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Chivas</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Hàng độc - Rượu độc đáo</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Johnnie Walker</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Whisky</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Remy Martin</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Glenmorangie</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu__sub--content">
+                              <h4 class="menu__sub--header">RƯỢU NGOẠI</h4>
+                              <ul class="menu__sub--list">
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Chivas</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Hàng độc - Rượu độc đáo</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Johnnie Walker</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Whisky</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Remy Martin</a></li>
+                                    <li class="menu__sub--items"><a class="menu__sub--link" href="#">Rượu Glenmorangie</a></li>
+                              </ul>
+                            </div>
+                        <div class="menu__sub--img"><img src="assets/images/menu/sub.png" alt="Sub menu"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="menu__nav--items"><a class="menu__nav--link" href="#">RƯỢU TRẮNG</a>
+                  </li>
+                  <li class="menu__nav--items"><a class="menu__nav--link" href="#">CHAMPAGNE</a>
+                  </li>
+                  <li class="menu__nav--items"><a class="menu__nav--link" href="#">THÔNG TIN</a>
+                  </li>
+                  <li class="menu__nav--items"><a class="menu__nav--link" href="#">BLOG</a>
+                  </li>
+                  <li class="menu__nav--items"><a class="menu__nav--link" href="#">LIÊN HỆ</a>
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main class="cart-main">
+          <div class="breadcrumb">
+            <div class="container breadcrumb__inner"><a href="index.html">Trang chủ</a><span>/</span><a href="#">Sản phẩm</a><span>/</span>
+              <p>Giỏ hàng</p>
+            </div>
+          </div>
+      <section class="cart">
+        <div class="container">
+              <div class="section__arrow--title">
+                <h1 class="section__arrow--header">GIỎ HÀNG</h1><img class="section__arrow--icon" src="assets/images/decor/2.png" alt="icon">
+              </div>
+          <div class="cart__inner">
+            <div class="cart__table">
+              <div class="cart__table-row">
+                <h4>SẢN PHẨM</h4>
+                <h4>ẢNH</h4>
+                <h4>TÊN SẢN PHẨM</h4>
+                <h4>GIÁ</h4>
+                <h4>SỐ LƯỢNG</h4>
+                <h4>TỔNG SỐ</h4>
+                <h4>XÓA</h4>
+              </div>
+                  <div class="cart__table-row">
+                    <div> <img src="assets/images/cart/1.jpg" alt="wine">
+                      <h5>RƯỢU VANG ĐỎ</h5>
+                    </div>
+                    <div>
+                      <h5>RƯỢU VANG ĐỎ</h5>
+                    </div>
+                    <div>
+                      <p class="price">345.000<span>đ</span></p>
+                    </div>
+                    <div>
+                      <h5>1</h5>
+                    </div>
+                    <div>
+                      <p class="price">345.000<span>đ</span></p>
+                    </div>
+                    <div><a href="#"><i class="fas fa-trash-alt"></i></a></div>
+                  </div>
+                  <div class="cart__table-row">
+                    <div> <img src="assets/images/cart/1.jpg" alt="wine">
+                      <h5>HAMBURGER THỊT BÒ</h5>
+                    </div>
+                    <div>
+                      <h5>HAMBURGER THỊT BÒ</h5>
+                    </div>
+                    <div>
+                      <p class="price">345.000<span>đ</span></p>
+                    </div>
+                    <div>
+                      <h5>1</h5>
+                    </div>
+                    <div>
+                      <p class="price">345.000<span>đ</span></p>
+                    </div>
+                    <div><a href="#"><i class="fas fa-trash-alt"></i></a></div>
+                  </div>
+                  <div class="cart__table-row">
+                    <div> <img src="assets/images/cart/1.jpg" alt="wine">
+                      <h5>RƯỢU VANG ĐỎ</h5>
+                    </div>
+                    <div>
+                      <h5>RƯỢU VANG ĐỎ</h5>
+                    </div>
+                    <div>
+                      <p class="price">345.000<span>đ</span></p>
+                    </div>
+                    <div>
+                      <h5>2</h5>
+                    </div>
+                    <div>
+                      <p class="price">690.000<span>đ</span></p>
+                    </div>
+                    <div><a href="#"><i class="fas fa-trash-alt"></i></a></div>
+                  </div>
+                  <div class="cart__table-row">
+                    <div> <img src="assets/images/cart/1.jpg" alt="wine">
+                      <h5>HAMBURGER THỊT BÒ</h5>
+                    </div>
+                    <div>
+                      <h5>HAMBURGER THỊT BÒ</h5>
+                    </div>
+                    <div>
+                      <p class="price">345.000<span>đ</span></p>
+                    </div>
+                    <div>
+                      <h5>2</h5>
+                    </div>
+                    <div>
+                      <p class="price">690.000<span>đ</span></p>
+                    </div>
+                    <div><a href="#"><i class="fas fa-trash-alt"></i></a></div>
+                  </div>
+            </div>
+            <div class="cart__btn"><a class="btn" href="#">TIẾP TỤC MUA HÀNG</a><a class="btn" href="#">XÓA</a><a class="btn" href="#">CẬP NHẬT</a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brands"><img src="assets/images/brands/brands.png" alt="Brands"></div>
+        <div class="footer__menu">
+          <div class="footer__menu--info">
+                <h4 class="footer__menu--header">THÔNG TIN</h4>
+                <ul class="footer__menu--list">
+                  <li class="footer__menu--items"><a class="footer__menu--link">VỀ CHÚNG TÔI</a></li>
+                </ul>
+                <ul class="footer__menu--list">
+                  <li class="footer__menu--items"><a class="footer__menu--link">GIAO HÀNG</a></li>
+                </ul>
+                <ul class="footer__menu--list">
+                  <li class="footer__menu--items"><a class="footer__menu--link">CẢM NGHĨ</a></li>
+                </ul>
+                <ul class="footer__menu--list">
+                  <li class="footer__menu--items"><a class="footer__menu--link">LƯU TRỮ</a></li>
+                </ul>
+                <ul class="footer__menu--list">
+                  <li class="footer__menu--items"><a class="footer__menu--link">CHÍNH SÁCH RIÊNG TƯ</a></li>
+                </ul>
+          </div>
+          <div class="footer__menu--order">
+                <h4 class="footer__menu--header">MUA HÀNG</h4>
+                <ul class="footer__menu--list">
+                  <li class="footer__menu--items"><a class="footer__menu--link">VẬN CHUYỂN VÀ TRẢ HÀNG</a></li>
+                </ul>
+                <ul class="footer__menu--list">
+                  <li class="footer__menu--items"><a class="footer__menu--link">MUA HÀNG AN TOÀN</a></li>
+                </ul>
+                <ul class="footer__menu--list">
+                  <li class="footer__menu--items"><a class="footer__menu--link">VẬN QUỐC TẾ</a></li>
+                </ul>
+                <ul class="footer__menu--list">
+                  <li class="footer__menu--items"><a class="footer__menu--link">LIÊN KẾT</a></li>
+                </ul>
+                <ul class="footer__menu--list">
+                  <li class="footer__menu--items"><a class="footer__menu--link">DỊCH VỤ GIẢM GIÁ</a></li>
+                </ul>
+          </div>
+          <div class="footer__menu--email">
+                <h4 class="footer__menu--header">GỬI EMAIL</h4>
+            <div class="footer__menu--form">
+              <p>Gửi email cho chúng tôi để được hỗ trợ</p>
+              <form action="#" method="get">
+                <input type="email" placeholder="Enter your email">
+                <button type="Submit" value="Submit">Gửi</button>
+              </form>
+            </div>
+            <div class="footer__menu--media"><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-google-plus-g"></i></a><a href="#"><i class="fab fa-dribbble"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-rss"></i></a>
+            </div>
+          </div>
+          <div class="footer__menu--contact">
+                <h4 class="footer__menu--header">LIÊN HỆ</h4>
+            <ul class="footer__menu--contact-wrapper">
+              <li class="footer__menu--contact-list"><i class="fas fa-map-marker-alt"></i><span>Tầng 4, Tòa nhà Hanoi Group. Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội</span></li>
+              <li class="footer__menu--contact-list"><a href="tel: +840466742332"><i class="fas fa-phone"></i><span>(04) 6674 2332</span></a><a href="tel: +840437868904"><i class="fas fa-phone"></i><span>(04) 3786 8904</span></a></li>
+              <li class="footer__menu--contact-list"><a href="tel: +840866809686"> <i class="fas fa-phone"></i><span>(08) 6680 9686</span></a><a href="mailto:Support@bizweb.vn"><i class="fas fa-envelope"></i><span>Support@bizweb.vn</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bot">
+        <div class="container footer__bot--inner">
+          <div class="footer__bot--left">
+            <p>&#169; Copyright 2008-2014 DKT Technology JSC</p>
+          </div>
+          <div class="footer__bot--right"><a href="#"><i class="fab fa-cc-mastercard"></i></a><a href="#"><i class="fab fa-cc-visa"></i></a><a href="#"><i class="fab fa-cc-paypal"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

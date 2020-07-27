@@ -1,0 +1,7 @@
+extends layout.pug
+block title
+  +titlePage("Wineshop | Cart")
+block main
+  main.cart-main
+    +breadcrumb("Sản phẩm","/","Giỏ hàng")
+    include parts/cart/table.pug
