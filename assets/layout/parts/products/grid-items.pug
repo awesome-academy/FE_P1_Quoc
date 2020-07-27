@@ -1,0 +1,20 @@
+.products__grid
+  .products__grid--top
+    .products__grid--show
+      a(href="#")
+        i.fas.fa-th
+      a(href="products-row.html")  
+        i.fas.fa-list
+    .products__grid--page
+      a(href="#")  
+        i.fas.fa-caret-left
+      a(href="#") 1
+      a(href="#") 2
+      a(href="#") 3
+      a(href="#") 4
+      a(href="#") 5
+      a(href="#")
+        i.fas.fa-caret-right
+  .products__grid--bot
+    - for (let img = 1; img <= 9; img++)
+      +home-header-new("none","",`products/${img}`,"RƯỢU VANG ĐÀ LẠT","370.000","450.000")

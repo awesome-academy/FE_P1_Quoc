@@ -1,0 +1,21 @@
+header.home-header
+  .home-header__top
+    img(src="assets/images/banner/banner.png", alt="background").home-header__top--bg
+    img(src="assets/images/banner/text.png", alt="").home-header__top--text
+    //- span.home-header__top--span Vang Đỏ
+    //- p.home-header__top--p Rượu#[span Since1980]
+  .home-header__wrapper  
+    .container.home-header__inner
+      .home-header__user
+        i.fas.fa-bars
+        ul.home-header__user--list
+          +home-header-user("Tài khoản của tôi")
+          +home-header-user("Trạng thái đơn hàng")
+          +home-header-user("Danh sách ưa thích")
+          +home-header-user("Giỏ hàng")
+          +home-header-user("Đăng nhập")
+          +home-header-user("Đăng ký")
+      .home-header__search
+        input(type="text" placeholder="Tìm kiếm ở đây...")
+        button(type="submit")  
+          i.fas.fa-search

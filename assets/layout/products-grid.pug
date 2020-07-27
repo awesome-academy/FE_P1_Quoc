@@ -1,0 +1,16 @@
+//- Home page
+extends layout.pug
+block title
+  +titlePage("Wineshop | Products")
+block main
+  main.products-main
+    +breadcrumb("Sản phẩm","/","Rượu vang đỏ")
+    .container
+      img(src="assets/images/products/banner.jpg", alt="").products__banner
+      input#products-btn(type="checkbox").products-btn
+      label(for="products-btn").products-label
+        i.fas.fa-bars
+      .products__inner
+        include parts/products/list.pug
+        block show
+          include parts/products/grid-items.pug
